@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\oroginal_online_shoppers_intention.csv") 
+df = pd.read_csv(r"oroginal_online_shoppers_intention.csv") 
 
 # df.head()                                 # Display the first few rows of the dataset
 # df.info()                                 # Get general information about the dataset
@@ -50,5 +50,5 @@ df['Frequency'] = df['total_page_view']
 df['StayingRate'] = df['PageValues'] * (1 - df['ExitRates'])
 
 # Save the preprocessed dataset
-df.to_csv(r"C:\Users\alire\Desktop\Capstone Project\1.Data Preprocessing\preprocessed_online_shoppers_intention.csv", index=False)
+df.to_csv(r"preprocessed_online_shoppers_intention.csv", index=False)
 
