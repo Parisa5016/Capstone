@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 # Step 1: Load the 3-component PCA-transformed dataset
-df_scaled = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\4.Dimensionality_Reduction_Techniques\PCA_transformed_online_shoppers_intention_1.csv")
+df_scaled = pd.read_csv("PCA_transformed_online_shoppers_intention_1.csv")
 
 # Step 2: Apply K-Means clustering with k=4
 kmeans = KMeans(n_clusters=4, random_state=42)
