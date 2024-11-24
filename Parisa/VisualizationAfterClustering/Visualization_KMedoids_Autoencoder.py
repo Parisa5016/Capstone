@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Step 1: Load the original features data
-df_original = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\1.Data Preprocessing\preprocessed_online_shoppers_intention.csv")
+df_original = pd.read_csv("1.Data Preprocessing\preprocessed_online_shoppers_intention.csv")
 
 # Step 2: Load the KMeans-applied dataset (with PC1, PC2, and Cluster)
-df_kmedoids = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\5.Clustering Algorithms\KMeansClusteredUsingAutoEncoder_1.csv")
+df_kmedoids = pd.read_csv("KMeansClusteredUsingAutoEncoder_1.csv")
 
 # Step 3: Add the cluster labels from the KMeans-applied file to the original dataset
 df_original['Cluster'] = df_kmedoids['Cluster']
 
 # Step 4: Save the updated DataFrame with features and cluster labels as a CSV file
-output_csv_path = r"C:\Users\alire\Desktop\Capstone Project\6.VisualizationAfterClustering\features_with_KMedoidsClusters_&_Autoencoder_1.csv"
+output_csv_path = "features_with_KMedoidsClusters_&_Autoencoder_1.csv"
 df_original.to_csv(output_csv_path, index=False)
 
 # Step 5: List of features to plot
