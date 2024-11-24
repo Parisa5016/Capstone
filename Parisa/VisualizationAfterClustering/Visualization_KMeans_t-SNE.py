@@ -6,7 +6,7 @@ import seaborn as sns
 df_original = pd.read_csv("1.Data Preprocessing\preprocessed_online_shoppers_intention.csv")
 
 # Step 2: Load the KMeans-applied dataset (with PC1, PC2, and Cluster)
-df_kmeans = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\5.Clustering Algorithms\KMeansClusteredUsingT-SNE_1.csv")
+df_kmeans = pd.read_csv("KMeansClusteredUsingT-SNE_1.csv")
 
 # Step 3: Add the cluster labels from the KMeans-applied file to the original dataset
 df_original['Cluster'] = df_kmeans['Cluster']
