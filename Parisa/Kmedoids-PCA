@@ -1,1 +1,24 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn_extra.cluster import KMedoids
 
+# Step 1: Load the scaled dataset
+df_scaled = pd.read_csv("PCA_transformed_online_shoppers_intention_1.csv")
+
+# Step 4: Apply K-Means clustering with k=4
+kmedoids = KMedoids(n_clusters=4, random_state=42)
+labels = kmedoids.fit_predict(df_scaled)
+
+# Add the cluster labels to the DataFrame
+df_scaled['Cluster'] = labels
+
+# Step 6: Save the dataframe with cluster labels as a CSV file
+output_path = "KMedoidsClusteredUsingPCA_1.csv"
+df_scaled.to_csv(output_path, index=False)
+
+# Step 5: Plot the clusters
+plt.scatter(df_scaled.iloc[:, 0], df_scaled.iloc[:, 1], c=labels, cmap='viridis') # Use .iloc[] to slice the DataFrame
+plt.title('K-Medoids Clustering with PCA (k=4)')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.show()
