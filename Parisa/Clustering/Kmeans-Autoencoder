@@ -1,1 +1,28 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+# Step 1: Load the scaled dataset
+df_scaled = pd.read_csv("autoencoder_transformed_online_shoppers_intention_1.csv")
+
+# Drop the original non-numeric columns
+df_scaled = df_scaled.drop(columns=['Month', 'VisitorType'])
+
+# Step 2: Apply K-Means clustering with k=4
+kmeans = KMeans(n_clusters=4, random_state=42)
+labels = kmeans.fit_predict(df_scaled)
+
+# Add the cluster labels to the DataFrame
+df_scaled['Cluster'] = labels
+
+# Step 3: Save the dataframe with cluster labels as a CSV file
+output_path = "KMeansClusteredUsingAutoEncoder_1.csv"
+df_scaled.to_csv(output_path, index=False)
+
+# Step 4: Plot the clusters
+plt.scatter(df_scaled.iloc[:, 0], df_scaled.iloc[:, 1], c=labels, cmap='viridis') # Use .iloc[] to slice the DataFrame
+plt.title('K-Means Clustering with AutoEncoder (k=4)')
+plt.xlabel('AutoEncoder Component 1')
+plt.ylabel('AutoEncoder Component 2')
+plt.show()
 
