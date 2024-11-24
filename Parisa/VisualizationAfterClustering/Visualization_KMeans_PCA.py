@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns  # for creating a bar plot.
 
 # Step 1: Load the original features data
-df_original = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\1.Data Preprocessing\preprocessed_online_shoppers_intention.csv")
+df_original = pd.read_csv("preprocessed_online_shoppers_intention.csv")
 
 # Step 2: Load the KMeans-applied dataset (with PC1, PC2, and Cluster)
 df_kmeans = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\5.Clustering Algorithms\KMeansClusteredUsingPCA_1.csv")
@@ -12,7 +12,7 @@ df_kmeans = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\5.Clustering A
 df_original['Cluster'] = df_kmeans['Cluster']
 
 # Step 4: Save the updated DataFrame with features and cluster labels as a CSV file
-output_csv_path = r"C:\Users\alire\Desktop\Capstone Project\6.VisualizationAfterClustering\features_with_KMeansClusters_&_PCA_1.csv"
+output_csv_path = "features_with_KMeansClusters_&_PCA_1.csv"
 df_original.to_csv(output_csv_path, index=False)
 
 # Step 5: List of features to plot
