@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df_scaled = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\2.Data Transformation (Scaling)\scaled_preprocessed_online_shoppers_intention_not_MinMax.csv")
+df_scaled = pd.read_csv(r"Shahnoosh/scaled_preprocessed_online_shoppers_intention_not_MinMax.csv")
 
 # Drop the original non-numeric columns
 df_scaled = df_scaled.drop(columns=['Month', 'VisitorType'])
