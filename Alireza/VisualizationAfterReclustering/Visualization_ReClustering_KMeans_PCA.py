@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns  # for creating a bar plot.
 
 # Step 1: Load the original features data
-df_original = pd.read_csv(r"Alireza/RandomForest_trained_model.csv")
+df_original = pd.read_csv(r"Alireza/Data/RandomForest_trained_model.csv")
 
 # Step 2: Load the KMeans-applied dataset (with PC1, PC2, and Cluster)
 df_kmeans = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\10.Reclustering After Churn Labelling\KMeans_ReClustered_PCA_with_churn.csv")
