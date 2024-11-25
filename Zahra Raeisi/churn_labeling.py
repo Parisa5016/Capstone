@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the clustered dataset
-df_clustered = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\1.Data Preprocessing\preprocessed_online_shoppers_intention.csv")
+df_clustered = pd.read_csv(r"preprocessed_online_shoppers_intention.csv")
 
 # Define thresholds for Recency, Frequency, and Staying Rate
 recency_threshold = 1                # Customers who haven’t interacted in over one month are likely at risk of churn.
@@ -16,6 +16,6 @@ df_clustered['Churn'] = df_clustered.apply(lambda row:
     else 0, axis=1)
 
 # Save the KMeans-PCA clustered dataset containing "Churn" column
-df_clustered.to_csv(r'C:\Users\alire\Desktop\Capstone Project\8.Churn Labeling\churnLabled_preprocessed_online_shoppers_intention.csv', index=False)
+df_clustered.to_csv('churnLabled_preprocessed_online_shoppers_intention.csv', index=False)
 
 print(df_clustered.Churn)
