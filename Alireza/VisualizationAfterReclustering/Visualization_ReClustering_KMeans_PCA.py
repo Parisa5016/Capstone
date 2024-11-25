@@ -6,7 +6,7 @@ import seaborn as sns  # for creating a bar plot.
 df_original = pd.read_csv(r"Alireza/Data/RandomForest_trained_model.csv")
 
 # Step 2: Load the KMeans-applied dataset (with PC1, PC2, and Cluster)
-df_kmeans = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\10.Reclustering After Churn Labelling\KMeans_ReClustered_PCA_with_churn.csv")
+df_kmeans = pd.read_csv(r"Alireza/VisualizationAfterReclustering/Visualization_ReClustering_KMeans_PCA.py")
 
 # Step 3: Add the cluster labels from the KMeans-applied file to the original dataset
 df_original['Cluster'] = df_kmeans['Cluster']
