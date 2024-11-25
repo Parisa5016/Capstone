@@ -47,5 +47,5 @@ plt.title("Confusion Matrix - Random Forest")
 plt.show()
 
 # Save the model trined by Logistic Regression
-df.to_csv(r"C:\Users\alire\Desktop\Capstone Project\9.Model Training & Evaluating\RandomForest_trained_model.csv", index=False)
+df.to_csv(r"RandomForest_trained_model.csv", index=False)
 
