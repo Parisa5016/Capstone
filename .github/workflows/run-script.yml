@@ -1,26 +1,37 @@
-name: Run Clustering Script
+name: Run Python Script
 
 on:
-  workflow_dispatch:  # Allows manual trigger from the Actions tab
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      # Checkout the repository
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set Up Python
+      # Setup Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
+      # Install Dependencies
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas matplotlib seaborn
 
+      # List Files (Debugging Step)
+      - name: List Repository Files
+        run: ls -R
+
+      # Run Python Script
       - name: Run Python Script
         run: |
-          python scripts/clustering_analysis.py
+          python scripts/my_script.py
