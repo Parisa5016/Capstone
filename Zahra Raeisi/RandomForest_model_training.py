@@ -6,7 +6,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
 # Load the preprocessed and labeled dataset
-df = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\8.Churn Labeling\churnLabled_preprocessed_online_shoppers_intention.csv")
+df = pd.read_csv(r"churnLabled_preprocessed_online_shoppers_intention.csv")
 
 # Features: Use the relevant columns for prediction
 X = df[['Length', 'Recency', 'Frequency', 'StayingRate']]
