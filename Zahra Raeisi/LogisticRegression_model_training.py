@@ -8,7 +8,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GridSearchCV
 
 # Load the preprocessed and labeled dataset
-df = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\8.Churn Labeling\churnLabled_preprocessed_online_shoppers_intention.csv")
+df = pd.read_csv(r"churnLabled_preprocessed_online_shoppers_intention.csv")
 
 # Features: Use the relevant columns for prediction
 X = df[['Length', 'Recency', 'Frequency', 'StayingRate']]
@@ -49,7 +49,7 @@ plt.title("Confusion Matrix - Logistic Regression")
 plt.show()
 
 # Save the model trined by Logistic Regression
-df.to_csv(r"C:\Users\alire\Desktop\Capstone Project\9.Model Training & Evaluating\LogisticRegression_trained_model.csv", index=False)
+df.to_csv(r"LogisticRegression_trained_model.csv", index=False)
 
 # Perform cross-validation on the LRFS-based Logistic Regression model
 cv_scores = cross_val_score(lr_model_weighted, X, y, cv=5, scoring='roc_auc')
