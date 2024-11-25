@@ -7,11 +7,11 @@ import os
 print("Working Directory:", os.getcwd())
 
 # Load original features data
-df_original = pd.read_csv("data/RandomForest_trained_model.csv")
+df_original = pd.read_csv("Alireza/data/RandomForest_trained_model.csv")
 print("Loaded df_original successfully.")
 
 # Load KMeans-applied dataset
-df_kmeans = pd.read_csv("data/KMeans_ReClustered_PCA_with_churn.csv")
+df_kmeans = pd.read_csv("Alireza/Data/KMeans_ReClustered_PCA_with_churn.csv")
 print("Loaded df_kmeans successfully.")
 
 # Add cluster labels
