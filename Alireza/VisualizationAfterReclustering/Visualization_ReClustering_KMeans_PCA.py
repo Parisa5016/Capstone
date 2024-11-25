@@ -12,8 +12,8 @@ df_kmeans = pd.read_csv(r"Alireza/VisualizationAfterReclustering/Visualization_R
 df_original['Cluster'] = df_kmeans['Cluster']
 
 # Step 4: Save the updated DataFrame with features and cluster labels as a CSV file
-output_csv_path = r"C:\Users\alire\Desktop\Capstone Project\11.Visualization After ReClustering\features_with_KMeans_ReClusters_PCA.csv"
-df_original.to_csv(output_csv_path, index=False)
+# output_csv_path = r"C:\Users\alire\Desktop\Capstone Project\11.Visualization After ReClustering\features_with_KMeans_ReClusters_PCA.csv"
+# df_original.to_csv(output_csv_path, index=False)
 
 # Step 5: List of features to plot, including Churn
 features = ['Length', 'Recency', 'Frequency', 'StayingRate', 'Revenue', 'Churn']
