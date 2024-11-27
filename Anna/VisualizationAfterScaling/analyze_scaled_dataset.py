@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the scaled dataset
-df_scaled = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\2.Data Transformation (Scaling)\scaled_preprocessed_online_shoppers_intention_not_MinMax.csv")
+df_scaled = pd.read_csv(r"scaled_preprocessed_online_shoppers_intention_not_MinMax.csv")
 
 # List the features of interest for scaling check
 features = ['Length', 'Recency', 'Frequency', 'StayingRate']
