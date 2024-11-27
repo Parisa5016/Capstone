@@ -1,6 +1,6 @@
 import pandas as pd
 
-df_scaled = pd.read_csv(r"C:\Users\alire\Desktop\Capstone Project\1.Data Preprocessing\preprocessed_online_shoppers_intention.csv")
+df_scaled = pd.read_csv(r"preprocessed_online_shoppers_intention.csv")
 
 # # Check the range of each feature
 # print(df_scaled[['Length', 'Recency', 'Frequency', 'StayingRate']].describe())
@@ -22,4 +22,4 @@ df_scaled[features_to_scale] = scaler.fit_transform(df_scaled[features_to_scale]
 print(df_scaled[features_to_scale].describe())
 
 # Save the corrected scaled dataset
-df_scaled.to_csv(r"C:\Users\alire\Desktop\Capstone Project\2.Data Transformation (Scaling)\scaled_preprocessed_online_shoppers_intention_not_MinMax", index=False)
+df_scaled.to_csv(r"scaled_preprocessed_online_shoppers_intention_not_MinMax", index=False)
